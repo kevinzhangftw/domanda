@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       # If user saves in the db successfully:
       # render json 200
+      render json: @user
     else
       # If user fails model validation -
       # render status failure

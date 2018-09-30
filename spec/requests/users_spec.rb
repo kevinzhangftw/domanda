@@ -3,7 +3,13 @@ require 'rails_helper'
 RSpec.describe 'Users API', type: :request do
   # initialize test data
   describe 'POST /users' do
-    let(:valid_attributes) { { email: 'kevinctzhang@gmail.com' } }
+    let(:valid_attributes) { {
+        name: 'kai',
+        email: 'kevinctzhang@gmail.com',
+        password: 'password',
+        password_confirmation: 'password'
+      }
+    }
     context 'when the request is valid' do
       before { post '/users', params: valid_attributes }
 
